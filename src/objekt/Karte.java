@@ -10,17 +10,17 @@ public class Karte {
 	private String herkunftland;
 	private Integer angriffswert;
 	private Integer verteidigungswert;
-	private Integer farbNummer;
+	private Integer farbeNummer;
 	
 	public Karte() {	
 	}
 	
-	public Karte(String name, String herkunftland, Integer angriffswert, Integer verteidigungswert, Integer farbNummer) {
+	public Karte(String name, String herkunftland, Integer angriffswert, Integer verteidigungswert, Integer farbeNummer) {
 		this.name = name;
 		this.herkunftland = herkunftland;
 		this.angriffswert = angriffswert;
 		this.verteidigungswert = verteidigungswert;
-		this.farbNummer = farbNummer;
+		this.farbeNummer = farbeNummer;
 		
 	}
 
@@ -57,17 +57,17 @@ public class Karte {
 	}
 
 	public Integer getFarbeNummer() {
-		return farbNummer;
+		return farbeNummer;
 	}
 
-	public void setFarbeNummer(Integer farbNummer) {
-		this.farbNummer = farbNummer;
+	public void setFarbeNummer(Integer farbeNummer) {
+		this.farbeNummer = farbeNummer;
 	}
 	
 
-	public static String farbeÜbersetzung(int farbNummer) {
+	public static String farbeÜbersetzung(int farbeNummer) {
 	
-		if (farbNummer >= 1 && farbNummer <= 5) {
+		if (farbeNummer >= 1 && farbeNummer <= 5) {
 		Map<Integer, String> myMap = new HashMap<Integer, String>();
 		myMap.put(1, "Grün");
 		myMap.put(2, "Rot");
@@ -75,22 +75,22 @@ public class Karte {
 		myMap.put(4, "Schwarz");
 		myMap.put(5, "Blau");
 		
-		return myMap.get(farbNummer);
+		return myMap.get(farbeNummer);
 		}
 		else {
-			return "Unbekannte Farb";
+			return "Unbekannte Farbe";
 		}
 	}
 
 	@Override
 	public String toString() {
 		return "Karte Name: " + name + ", Herkunftland: " + herkunftland + ", Angriffswert: " + angriffswert
-				+ ", Verteidigungswert: " + verteidigungswert + ", Farbnummer: " + farbNummer +  ", Farb: " + farbeÜbersetzung(farbNummer);
+				+ ", Verteidigungswert: " + verteidigungswert + ", Farbenummer: " + farbeNummer +  ", Farbe: " + farbeÜbersetzung(farbeNummer);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(verteidigungswert, angriffswert, farbNummer, herkunftland, name);
+		return Objects.hash(verteidigungswert, angriffswert, farbeNummer, herkunftland, name);
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class Karte {
 			return false;
 		Karte other = (Karte) obj;
 		return Objects.equals(verteidigungswert, other.verteidigungswert)
-				&& Objects.equals(angriffswert, other.angriffswert) && Objects.equals(farbNummer, other.farbNummer)
+				&& Objects.equals(angriffswert, other.angriffswert) && Objects.equals(farbeNummer, other.farbeNummer)
 				&& Objects.equals(herkunftland, other.herkunftland) && Objects.equals(name, other.name);
 	}
 }
