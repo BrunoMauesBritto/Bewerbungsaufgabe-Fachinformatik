@@ -1,6 +1,7 @@
 # Bewerbungsaufgabe-Fachinformatik
 
 Hiermit lege ich die Dokumentation über den Code vor, der gemäß den Anweisungen in dem Dokument "BewerbungsaufgabeFachinformatik" entwickelt wurde.
+Dieser Code wurde in der Sprache Java entwickelt.
 
 ## 1. Programm
 
